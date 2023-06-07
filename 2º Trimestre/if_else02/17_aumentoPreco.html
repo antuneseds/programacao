@@ -1,0 +1,42 @@
+<meta charset="UTF-8" />
+<script>
+    // Recebe o preço do produto e calcula o aumento do preço, baseado no seguinte critério:
+        //- até 280(inclusive): aumento de 20 %
+        //- até 700(inclusive): aumento de 15 %
+        //- até 1500(inclusive): aumento de 10 %
+        //- acima de 1500: aumento de 5 %
+    
+    // Entrada
+    let preco = Number(prompt(`Informe o preço do produto:`).trim().replace("," , "."));
+    
+    // Processamento
+    if (preco <= 280) {
+
+        preco = preco * 1.2
+        alert(`Ficou R$${preco.toFixed(2).replace("." , ",")}. Aceitamos PIX.`);
+
+    }
+
+    else if (preco <= 700) {
+
+        preco = preco * 1.15
+        alert(`Ficou R$${preco.toFixed(2).replace("." , ",")}. Aceitamos PIX.`);
+
+    }
+
+    else if (preco <= 1500) {
+
+        preco = preco * 1.1
+        alert(`Ficou R$${preco.toFixed(2).replace("." , ",")}. Aceitamos PIX.`);
+
+    }
+
+    else if (preco > 1500) {
+
+        preco = preco * 1.05
+        alert(`Ficou R$${preco.toFixed(2).replace("." , ",")}. Aceitamos PIX.`);
+
+    }
+    else alert(`Responda corretamente, Neanderthal.`);
+    
+</script>

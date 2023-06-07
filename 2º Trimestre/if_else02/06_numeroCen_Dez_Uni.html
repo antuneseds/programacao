@@ -1,0 +1,61 @@
+<script>
+    /*
+    //PROBLEMA
+    Faça um script que leia um número inteiro menor que 1000 e imprima a quantidade de 
+    centenas, dezenas e unidades do mesmo.
+    Observando os termos no plural a colocação do "e", da vírgula entre outros.
+    
+    Exemplo:
+    326 = 3 centenas, 2 dezenas e 6 unidades
+    12 = 1 dezena e 2 unidades
+    Testar com: 326, 300, 100, 320, 310,305, 301, 101, 311, 111, 25, 20, 10, 21, 11, 1, 7 e 16
+    */
+
+    //ENTRADA
+    let n = Number(prompt(`Informe um número inteiro menor que 1000`).trim());
+
+    //PROCESSAMENTO
+    if (n < 1000) {
+
+        if (n >= 100) {
+
+            const centena = Math.floor(n / 100);
+            n %= 100;
+
+            if (n >= 10) {
+
+                const dezena = Math.floor(n / 10);
+                n %= 10;
+
+                if (n > 0) alert(`${centena} centena(s), ${dezena} dezena(s) e ${n} unidade(s)`);
+                
+                else alert(`${centena} centena(s) e ${dezena} dezena(s)`);
+                
+            }
+            else if (n > 0) alert(`${centena} centena(s) e ${n} unidade(s)`);
+            
+            else alert(`${centena} centenas`);
+            
+        }
+
+        else if (n >= 10) {
+
+            const dezena = Math.floor(n / 10);
+            n %= 10;
+
+            if (n > 0) alert(`${dezena} dezenas e ${num} unidades`);
+            
+            else alert(`${dezena} dezenas`);
+            
+        }
+        else alert(`${n} unidades`);
+        
+    }
+    else alert(`Resposta inválida`);
+    
+
+
+    //SAÍDA
+
+
+</script>
