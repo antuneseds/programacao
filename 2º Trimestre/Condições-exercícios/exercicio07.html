@@ -1,0 +1,28 @@
+<script> 
+
+  
+     //ENTRADA 
+    const numero1 = Number(prompt(`Digite o primeiro número`).trim().replace(",","."));
+    const numero2 = Number(prompt(`Digite o segundo número`).trim().replace(",","."));
+    const numero3 = Number(prompt(`Digite o terceiro número`).trim().replace(",","."));
+  
+     //PROCESSAMENTO 
+  
+  
+     //SAÍDA 
+    if (numero3 == numero2 == numero1) {
+        document.write(`Todos tem o mesmo valor`);
+    } else if (numero1 < numero2 && numero1 < numero3) {
+        document.write(`${numero1} é o menor`);
+    } else if (numero2 < numero1 && numero2 < numero3) {
+        document.write(`${numero2} é o menor`);
+    } else if (numero3 < numero2 && numero3 < numero1) {
+        document.write(`${numero3} é o menor`);
+    } else if (numero3 > numero1 && numero2 == numero1) {
+        document.write(`${numero1} e ${numero2} são os menores`);
+    } else if (numero1 < numero2 && numero1 == numero3) {
+        document.write(`${numero1} e ${numero3} são os menores`);
+    } else if (numero2 < numero1 && numero2 == numero3) {
+        document.write(`${numero2} e ${numero3} são os menores`);
+    };
+ </script>

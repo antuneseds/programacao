@@ -1,0 +1,20 @@
+<script> 
+     
+  
+     //ENTRADA 
+    const nota1 = Number(prompt(`Qual a sua primeira nota:`).trim().replace(",","."));
+    const nota2 = Number(prompt(`Qual a sua segunda nota:`).trim().replace(",","."));
+    const nota3 = Number(prompt(`Qual a sua terceira nota:`).trim().replace(",","."));
+  
+     //PROCESSAMENTO 
+    const media = (nota3 + nota2 + nota1) / 3;
+  
+     //SAÍDA 
+    if (media < 4) {
+        document.write(`Reprovado`);
+    } else if (media >= 4 && media < 6) {
+        document.write(`Exame`);
+    } else {
+        document.write(`Aprovado`);
+    };
+ </script>

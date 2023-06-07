@@ -1,0 +1,14 @@
+<meta charset="UTF - 8">
+<script>
+  //ENTRADA
+  const salario = prompt(`Insira o seu salario mensal`);
+  const aumento = prompt(`Insira o seu aumento percentual`);
+
+  //PROCESSAMENTO
+  const valorPercentual = Number(aumento) / Number(100) * Number(salario);
+  const novoSalario = Number(salario) + Number(valorPercentual);
+
+  //SAÍDA
+  document.write(`O salário que você deseja será de ${novoSalario} reais.`);
+
+</script>

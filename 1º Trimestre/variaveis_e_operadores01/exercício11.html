@@ -1,0 +1,15 @@
+<meta charset="UTF - 8">
+<script>
+    /*
+    Peça para o usuário informar a quantidade de dias que o carro foi alugado e a quantidade de quilômetros rodados. Retorne o valor a ser pago de aluguel considerando que a diária do aluguel é de R$ 60,00 e cada Km rodado custa R$ 0,15.
+    */
+    //ENTRADA
+    const dias = prompt(`Informe a quantos dias o carro esta alugado`);
+    const km = prompt(`Informe os quilômetros rodados`).replace(`,`,`.`);
+
+    //PROCESSAMENTO
+    const preco = ((Number(dias) * 60) + (Number(km)) * 0.15)
+
+    //SAÍDA
+    document.write(`O preço do aluguel é: R$${preco}.`);
+</script>

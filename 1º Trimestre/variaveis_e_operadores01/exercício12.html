@@ -1,0 +1,12 @@
+<meta charset="UTF-8">
+<script>
+    //ENTRADA
+    const cigarros = prompt(`Insira a quantidade de cigarros fumados por dia`);
+    const anos = prompt(`Insira a quantidade de anos que você fuma`);
+
+    //PROCESSAMENTO
+    const tempoPerdido = [(Number(anos) * 365) * (Number(cigarros))] * 10;
+
+    //SAIDA
+    document.write(`Você perdeu ${tempoPerdido} minuto.`);
+</script>

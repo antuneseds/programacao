@@ -1,0 +1,12 @@
+<meta charset="UTF-8">
+<script>
+    //ENTRADA
+    const ovosComprados = Number(prompt(`Insira a quantidade de ovos que você comprou`));
+
+    //PROCESSAMENTO
+    const duziasDeOvos = ovosComprados / 12;
+    const duziasArredondadas = Math.ceil(duziasDeOvos);
+
+    //SAIDA
+    document.write(`Você comprou ${duziasArredondadas} dúzia(s) de ovos.`);
+</script>

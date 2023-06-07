@@ -1,0 +1,13 @@
+<meta charset="UTF - 8">
+<script>
+    //ENTRADA
+    const horas = prompt(`Informe quantas horas você trabalha no mês`);
+    const porHora = prompt(`Informe quanto é pago por hora`).replace(`,`,`.`);
+    
+    //PROCESSAMENTO 
+    const salario = Number(horas) * Number(porHora);
+    const salarioFinal = salario - (salario *0.08) - (salario* 0.11);
+
+    //SAIDA
+    document.write(`Seu salário líquido é: R$${salarioFinal}.`);
+</script>

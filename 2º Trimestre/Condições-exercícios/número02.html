@@ -1,0 +1,17 @@
+<meta charset="UTF-8">
+<script>
+    const numeroUm= Number(prompt(`Informe o primeiro número:`));
+    const numeroDois= Number(prompt(`Informe o segundo número:`));
+    const numeroTres= Number(prompt(`Informe o terceiro número:`));
+
+    if (numeroDois < numeroUm > numeroTres) {
+        alert(`${numeroUm} é maior que os números ${numeroDois} e ${numeroTres}.`);
+    }
+    else if (numeroUm < numeroDois > numeroTres) {
+        alert(`${numeroDois} é maior que os números ${numeroUm} e ${numeroTres}. `);
+    }
+    
+    else {
+        alert(`${numeroTres} é maior que os números ${numeroUm} e ${numeroDois}.`);
+    }
+</script>

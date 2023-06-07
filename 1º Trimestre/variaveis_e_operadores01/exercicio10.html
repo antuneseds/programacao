@@ -1,0 +1,18 @@
+<meta charset="UTF - 8">
+<script>
+    /*
+    
+    */
+    //ENTRADA
+    const days = prompt(`Infirme os dias`);
+    const hours = prompt(`Informe as horas`);
+    const minutes = prompt(`Informe os minutos`);
+    const seconds = prompt(`Informe os segundos`);
+    
+    //PROCESSAMENTO
+    const totalTime = (Number(days)*86400) + (Number(hours) * 3600) + (Number(minutes) * 60) + (Number(seconds));
+
+    //SAÍDA
+    document.write(`Isto é o mesmo que ${totalTime} secondos.`);
+    
+</script>

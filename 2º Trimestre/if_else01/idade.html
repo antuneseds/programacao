@@ -1,0 +1,22 @@
+<script>
+    const idade= Number(prompt(`Insira a sua idade:`).replace("anos", "").trim());
+    if(idade < 2) {
+        alert(`Você é um bebezinho.`);
+    }
+
+    else if (idade < 12) {
+        alert(`Você é uma criança.`);
+    }
+
+    else if (idade < 18) {
+        alert(`Você é um adolescente.`);
+    }
+
+    else if (idade < 60) {
+        alert(`Você é um adulto.`);
+    }
+
+    else if (idade >= 60) {
+        alert(`Parabéns, você sabe da vida!`);
+    }
+</script>
