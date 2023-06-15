@@ -9,21 +9,23 @@
     // imc > 30: "Obeso"
 
     // Entrada
-    const peso = Number(prompt(`Informe seu peso:`).trim().replace("," , "."));
-    const altura = Number(prompt(`Informe sua altura:`).trim().replace("," , "."));
+    let peso= Number(prompt(`Insira o seu peso:`).trim().replace(",","."));
+    let altura= Number(prompt(`Insira a sua altura:`).trim().replace(",","."));
     
     // Processamento
-    const imc = peso / altura ** 2;
+    let imc = peso / altura ** 2;
+    
+    if (imc <= 18.5) alert(`Subpeso.`);
 
-    if (imc > 30) alert(`Obeso.`);
+    else if (imc <= 25) alert(`Normal`);
+
+    else if (imc <= 30) alert(`Sobrepeso`);
+
+    else if (imc > 30) alert(`Obeso.`);
+
+    else (`Resposta inválida!`);
+
     
-    else if (imc <= 30 && imc > 25) alert(`Sobrepeso.`);
-    
-    else if (imc <= 25 && imc > 18.5) alert(`Normal.`);
-    
-    else if (imc <= 18.5) alert(`Subpeso.`);
-    
-    else alert(`Resposta inválida.`);
     
 
 </script>

@@ -8,30 +8,24 @@
     // - cães grandes: fator 7.
 
     // Entrada
-    let anos = prompt(`Quantos anos tem o seu cão?`);
-    let porte = prompt(`Informe o porte de seu cão: ("P" - "M" - "F")`).trim().toUpperCase();
-    
+    let idade= Number(prompt(`Insira a idade do seu cão:`).trim());
+    let fator= prompt(`Qual o porte do seu cão? (Insira P-pequeno , M-médio ou G-grande):`).toUpperCase().trim();
+
     // Processamento
-    if (porte == "P") {
-
-        anos *= 5
-        alert(`Seu cão tem ${anos} anos humanos.`);
-
+    if (fator == "P"){
+        const cao = idade * 5;
+        alert(`A idade do seu cão tem ${cao} anos humanos. `);
     }
-
-    else if (porte == "M") {
-
-        anos *= 6
-        alert(`Seu cão tem ${anos} anos humanos.`);
-
+    else if (fator == "M"){
+        const cao = idade * 6;
+        alert(`A idade do seu cão tem ${cao} anos humanos.`);
     }
-
-    else if (porte == "F") {
-
-        anos *= 7
-        alert(`Seu cão tem ${anos} anos humanos.`);
-
+    else if (fator == "G"){
+        const cao = idade * 7;
+        alert(`A idade do seu cão tem ${cao} anos humanos.`);
     }
-    else alert(`Resposta inválida.`);
+    else{
+        alert(`Valor inválido!`);
+    }
 
 </script>

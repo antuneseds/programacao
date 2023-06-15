@@ -6,17 +6,18 @@
     */
 
     //ENTRADA
-    const numero = Number(prompt(`Informe um número:`).trim().replace("," , "."));
+    let numero= Number(prompt(`Insira qualquer número:`).trim().replace(",","."));
+
 
     //PROCESSAMENTO
-    if (!isNaN(numero)) {
-
-        if (Number.isInteger(numero)) alert(`É um número inteiro.`);
-        
-        else alert(`É um número decimal.`);
-        
+    // if (Number.isInteger(numero) == true) {
+    if (numero % 1 == 0) {
+        alert(`Este número é inteiro.`);
     }
-    else alert(`Informe um NÚMERO:`);
+    else  {
+        alert(`Este número é decimal`)
+    } 
+    
     
 
 </script>

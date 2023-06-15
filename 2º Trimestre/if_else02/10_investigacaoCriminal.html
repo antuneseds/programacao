@@ -13,23 +13,44 @@
     */
 
     //ENTRADA
-    let p1 = prompt(`Telefonou para a vítima? (S ou N)`).toUpperCase().trim();
-    let p2 = prompt(`Esteve no local do crime? (S ou N)`).toUpperCase().trim();
-    let p3 = prompt(`Mora perto da vítima? (S ou N)`).toUpperCase().trim();
-    let p4 = prompt(`Devia para a vítima? (S ou N)`).toUpperCase().trim();
-    let p5 = prompt(`Já trabalhou com a vítima? (S ou N)`).toUpperCase().trim();
-    let sins = 0;
-
+    let telefone= prompt(`Telefonou para a vítima? (Responda com "s" para sim ou "n" para não):`).toLowerCase().trim();
+    let local= prompt(`Esteve no local do crime? (Responda com "s" para sim ou "n" para não)`).toLowerCase().trim();
+    let endereco= prompt(`Mora perto da vítima? (Responda com "s" para sim ou "n" para não)`).toLowerCase().trim();
+    let divida= prompt(`Devia para a vítima? (Responda com "s" para sim ou "n" para não)`).toLowerCase().trim();
+    let trabalho= prompt(`Já trabalhou com a vítima? (Responda com "s" para sim ou "n" para não)`).toLowerCase().trim();
+    let f= 0;
+    
     //PROCESSAMENTO
-    if (p1 === "S") sins ++;
-    if (p2 === "S") sins ++;
-    if (p3 === "S") sins ++;
-    if (p4 === "S") sins ++;
-    if (p5 === "S") sins ++;
+    if (telefone == "s"){
+        f += 1
+    }
+    
+    if (local == "s"){
+        f += 1 
+    }
 
-    if (sins === 5) alert(`Assassino!`);
-    else if (sins >= 3) alert(`Cúmplice!`);
-    else if (sins === 2) alert(`Suspeito.`);
-    else alert(`Inocente.`);
+    if (endereco == "s"){
+        f += 1 
+    }
+    if (divida == "s"){
+        f += 1 
+    }
+    if (trabalho == "s"){
+        f += 1 
+    }
+    if (f == 2){
+        alert(`Suspeito!`)
+    }
+    else if (f == 3 || f == 4){
+        alert(`Cúmplice!`)
+    }
+    else if (f== 5){
+        alert(`Assassino!`)
+    }
+    else{
+        alert(`Inocente!`)
+    }
+
+    
 
 </script>

@@ -16,39 +16,36 @@
     */
 
     //ENTRADA
-    let litro = Number(prompt(`Informe o quando de combustível foi vendido:`).trim().replace("," , "."));
-    let tipo = prompt(`Informe o tipo do combustível (A ou G):`).trim().toUpperCase();
-
+    let litro= Number(prompt(`Insira o número de litros vendidos:`).trim().replace(",","."));
+    const combustivel= prompt(`Insira o tipo de combustível (Digite A-álcool ou G-gasolina):`).trim().toUpperCase();
+    
     //PROCESSAMENTO
-    if (tipo == "A") {
-
+    if (combustivel == "A") {
         if (litro <= 20) {
-            litro = litro * 6.1 * 0.97
-            alert(`Deverão ser pagos R$${litro.toFixed(2).replace("." , ",")}`);
+            const valorLitro = 6.1 - (6.1 * 0.03);
+            const valorPagar = valorLitro * litro;
+            alert(`O valor a pagar será de R$ ${valorPagar.toFixed(2).replace(".", ",")}.`);
         }
-
-        else if (litro > 20) {
-            litro = litro * 6.1 * 0.95
-            alert(`Deverão ser pagos R$${litro.toFixed(2).replace("." , ",")}`);
+        else {
+            const valorLitro = 6.1 - (6.1 * 0.05);
+            const valorPagar = valorLitro * litro;
+            alert(`O valor a pagar será de R$ ${valorPagar.toFixed(2).replace(".",",")}.`);
         }
-        else alert(`Resposta inválida.`);
-
     }
-
-    else if (tipo == "G") {
-
-        if (litro <= 20) {
-            litro = litro * 6.5 * 0.96
-            alert(`Deverão ser pagos R$${litro.toFixed(2).replace("." , ",")}`);
+    else if (combustivel == "G") {
+        if (litro <= 20){
+            const valorLitro = 6.5 - (6.5 * 0.04);
+            const valorPagar = valorLitro * litro;
+            alert(`O valor a pagar será de R$ ${valorPagar.toFixed(2).replace(".",",")}.`);
         }
-
-        else if (litro > 20) {
-            litro = litro * 6.5 * 0.94
-            alert(`Deverão ser pagos R$${litro.toFixed(2).replace("." , ",")}`);
+        else {
+            const valorLitro = 6.5 - (6.5 * 0.06);
+            const valorPagar = valorLitro * litro;
+            alert(`O valor a pagar será de R$ ${valorPagar.toFixed(2).replace(".",",")}.`);
         }
-        else alert(`Resposta inválida.`);
-
     }
-    else alert(`Resposta inválida.`);
-
+    else{
+        alert(`Valor inválido!`);
+    }
+    
 </script>
