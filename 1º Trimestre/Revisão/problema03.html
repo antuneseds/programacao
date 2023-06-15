@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+<script>
+    /*Desenvolva um programa que pergunte ao aluno a Nota 1 e a Nota 2 obtida no primeiro trimestre. Também pergunte qual o 
+    Peso da Nota 1 e o Peso da Nota 2.
+
+Calcule a média trimestral final baseado nas notas e respectivos pesos fornecidos e apresente a seguinte mensagem:
+"A média final do primeiro trimestre foi de MÉDIA."*/
+
+//ENTRADA
+let nota1= Number(prompt(`Insira a sua primeira nota:`).trim().replace(",","."));
+let nota2=Number(prompt(`Insira a sua segunda nota:`).trim().replace(",","."));
+let peso1=Number(prompt(`Insira o peso da sua primeira nota:`).trim().replace(",","."));
+let peso2=Number(prompt(`Insira o peso da sua segunda nota`).trim().replace(",","."));
+
+//PROCESSAMENTO
+let peso= peso1 + peso2;
+let media= (nota1 * peso1 + nota2 * peso2) / peso;
+
+//SAÍDA
+alert(`A média final do primeiro trimestre foi de ${media.toFixed(1).replace(".",",")}.`);
+
+</script>

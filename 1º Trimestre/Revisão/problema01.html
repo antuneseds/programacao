@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+<script>
+   /* Problema 1: 01_cargaHoraria.html
+Desenvolva um programa que pergunte para o usuário a Carga Horária total de uma disciplina e também pergunte qual a Carga Horária que foi 
+cumprida pelo aluno. Ao final, o programa deve informar qual a porcentagem de Carga Horária que foi cumprida pelo aluno.
+
+A mensagem final deverá ser:
+"A carga horária total da disciplina é de X horas e você já cumpriu Y horas. Isso equivale a Z% da carga horária total."*/
+
+   //ENTRADA
+   const cargaHoraria = Number(prompt(`Insira a carga horária da disciplina de matemática:`).trim());
+   const cargaCumprida = Number(prompt(`Insira a carga horária que você já cumpriu na disciplina de matemática:`).trim());
+
+   //PROCESSAMENTO
+   const carga = (cargaHoraria * 100) / cargaCumprida;
+
+   //SAÍDA
+   alert(`A carga horária total da disciplina é de ${cargaHoraria} horas e você já cumpriu ${cargaCumprida} horas. Isso equivale a ${carga}% da 
+   carga horária total.`);
+</script>
