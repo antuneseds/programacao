@@ -12,7 +12,7 @@ A mensagem final deverá ser:
    const cargaCumprida = Number(prompt(`Insira a carga horária que você já cumpriu na disciplina de matemática:`).trim());
 
    //PROCESSAMENTO
-   const carga = (cargaHoraria * 100) / cargaCumprida;
+   const carga = (cargaHoraria * cargaCumprida) * 100;
 
    //SAÍDA
    alert(`A carga horária total da disciplina é de ${cargaHoraria} horas e você já cumpriu ${cargaCumprida} horas. Isso equivale a ${carga}% da 
