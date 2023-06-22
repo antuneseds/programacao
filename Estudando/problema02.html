@@ -1,0 +1,18 @@
+<meta charset="UTF-8">
+<script>
+    /*Desenvolva um programa que pergunte para o aluno a nota obtida no primeiro, segundo e no 
+    terceiro trimestre. Calcule e apresente a média final do aluno.
+
+A mensagem final deverá ser:
+"As suas notas foram X, Y e Z. A sua média anual foi MÉDIA." */
+
+let primeiro= Number(prompt(`Insira a sua nota obtida no primeiro trimestre:`).replace(",",".").trim());
+let segundo= Number(prompt(`Insira a sua nota obtida no segundo trimestre:`).replace(",",".").trim());
+let terceiro= Number(prompt(`Insira a sua nota obtida no terceiro trimestre:`).replace(",",".").trim());
+
+let media= (primeiro + segundo + terceiro) / 3;
+
+alert(`As suas notas foram ${primeiro.toFixed(1).replace(".",",")}, ${segundo.toFixed(1).replace(".",",")} e ${terceiro.replace(".",",").toFixed(1)}. A sua média anual foi 
+${media.toFixed(1).replace(".",",")}`);
+
+</script>

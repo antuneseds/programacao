@@ -1,0 +1,17 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA: Média ponderada
+    Um aluno realizou três atividades avaliativas durante o trimestre, sendo que cada uma 
+    possuía seu peso específico. Os pesos das atividades são, respectivamente, 7, 2 e 1.
+    Peça para o usuário informar qual a nota que obteve em cada atividade e calcule a nota final
+    do trimestre. Ao final do programa apresente a média obtida pelo aluno.
+    */
+   let nota1= Number(prompt(`Insira a nota que você obteve na atividade 1:`).trim().replace(",","."));
+   let nota2= Number(prompt(`Insira a nota que você obteve na atividade 2:`).trim().replace(",","."));
+   let nota3= Number(prompt(`Insira a nota que você obteve na atividade 3`).trim().replace(",","."));
+
+   let media= (nota1 * 7 + nota2 * 2 + nota3 * 1) / 10;
+
+   alert(`A sua média obtida foi de ${media.toFixed(1).replace(",",".")}.`);
+</script>
