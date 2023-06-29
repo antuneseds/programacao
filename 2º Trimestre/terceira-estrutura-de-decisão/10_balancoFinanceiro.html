@@ -1,20 +1,32 @@
 <meta charset="UTF-8">
 <script>
-    //Problema: Balanço financeiro
-    // Faça um script que peça para o usuário informar as despesas relacionadas com:
-    // - Conta de água
-    // - Conta de energia elétrica
-    // - Conta de telefone
-    // - Supermercado
-    // Também peça para o usuário informar o valor que recebe de remuneração mensal (salário), proveniente da sua atuação profissional.
-    // Verifique se o usuário ganha mais do que recebe e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou quanto que faltou para poder pagar todas as contas previstas.
+    /*Problema: Balanço financeiro
+     Faça um script que peça para o usuário informar as despesas relacionadas com:
+     - Conta de água
+     - Conta de energia elétrica
+     - Conta de telefone
+     - Supermercado
+     Também peça para o usuário informar o valor que recebe de remuneração mensal (salário), proveniente da sua atuação profissional.
+     Verifique se o usuário ganha mais do que recebe e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou quanto que faltou 
+    para poder pagar todas as contas previstas.*/
 
     //Entrada
-
+    let agua= Number(prompt(`Informe quanto você deverá pagar na conta de água:`).trim().replace(",","."));
+    let energia= Number(prompt(`Informe quanto você deverá pagar na conta de energia elétrica:`).trim().replace(",","."));
+    let telefone= Number(prompt(`Informe quanto você deverá pagar na conta de telefone:`).trim().replace(",","."));
+    let Supermercado= Number(prompt(`Informe quanto você deverá pagar na conta no supermercado:`).trim().replace(",","."));
+    let salario= Number(prompt(`Informe o seu salário:`).trim().replace(",","."));
 
     //Processamento
+    
+    let diferenca = (agua + energia + telefone + Supermercado) - salario;
+    
+    let mensagemFinal= (diferenca > 0) ? `Faltaram R$ ${diferenca.toFixed(2).replace(".",",")}.`
+                        : (diferenca < 0) ? `Sobraram R$ ${(diferenca * -1).toFixed(2).replace(".",",")}. `
+                        : `Não sobrou nem faltou nada!`;
 
     
     //Saída
+    alert(mensagemFinal);
     
 </script>

@@ -10,11 +10,17 @@
     // Entre 5.9 e zero            E
 
     //Entrada
-
+    let nm= parseFloat(prompt(`Informe um número de 0 - 10:`).trim().replace(",","."));
 
     //Processamento
-
+    let mensagemFinal= (nm >= 9.0  && nm <= 10.0) ? `O conceito será A.`
+    : (nm >= 8.0 && nm <= 8.9) ? `O conceito será B.`
+    : (nm >= 7.0 && nm <= 7.9) ? `O conceito será C.`
+    : (nm >= 6.0 && nm <= 6.9) ? `O conceito será D.`
+    : (nm >= 0 && nm <= 5.9) ? `O conceito será E.`
+    : `Resposta Inválida!`; 
     
     //Saída
+    alert(mensagemFinal);
 
 </script>
