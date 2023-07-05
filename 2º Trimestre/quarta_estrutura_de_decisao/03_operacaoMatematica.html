@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    //PROBLEMA: Faça um script que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de 
+    uma frase que diga se o número é:
+    - par ou ímpar;
+    - positivo ou negativo;
+    - inteiro ou decimal.
+    */
+    let nm1 = Number(prompt(`Insira um número:`), trim().replace(",", "."));
+    let nm2 = Number(prompt(`Insira outro número:`).trim().replace(",", "."));
+    let nm3 = 0
+    let operacao = prompt(`Insira qaul operação você deseja realizar: (Digite +|-|/|*)`).trim();
+    switch (operacao) {
+        case "+":
+            nm3 = nm1 + nm2;
+            break;
+        case "-":
+            nm3 = nm1 - nm2;
+            break;
+        case "/":
+            nm3 = nm1 / nm2;
+            break;
+        case "*":
+            break;
+            nm3 = nm1 * nm2;
+        default:
+            alert(`Valor Inválido!`);
+            break;
+    }
+    let mensagemFinal= () ? "" 
+    : `Você não atingiu a maioridade. Falta ${ir}.`;
+    
+</script>
