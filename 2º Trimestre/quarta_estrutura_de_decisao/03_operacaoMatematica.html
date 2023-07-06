@@ -7,7 +7,7 @@
     - positivo ou negativo;
     - inteiro ou decimal.
     */
-    let nm1 = Number(prompt(`Insira um número:`), trim().replace(",", "."));
+    let nm1 = Number(prompt(`Insira um número:`). trim().replace(",", "."));
     let nm2 = Number(prompt(`Insira outro número:`).trim().replace(",", "."));
     let nm3 = 0
     let operacao = prompt(`Insira qaul operação você deseja realizar: (Digite +|-|/|*)`).trim();
@@ -28,7 +28,15 @@
             alert(`Valor Inválido!`);
             break;
     }
-    let mensagemFinal= () ? "" 
-    : `Você não atingiu a maioridade. Falta ${ir}.`;
+    let mensagemFinal= (nm3 > 0) ? `O número ${nm3.toFixed(2).replace(".",",")} é positivo` 
+    : `O número ${nm3.toFixed(2).replace(".",",")} é negativo`
     
+    mensagemFinal= (Number.isInteger(nm3)) ? mensagemFinal + `, inteiro`
+    : mensagemFinal + ", decimal."
+
+    mensagemFinal= (nm3 % 2 == 0) ? mensagemFinal + `e par.`
+    : mensagemFinal + " e ímpar."
+
+    alert(mensagemFinal);
+
 </script>

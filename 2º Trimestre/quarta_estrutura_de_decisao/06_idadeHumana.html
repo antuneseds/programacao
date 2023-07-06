@@ -7,12 +7,21 @@
     // - cães de porte médio: fator 6
     // - cães grandes: fator 7.
 
-    // ENTRADA
+    let idade = Number(prompt(`Informe quantos anos tem o seu cão:`).trim());
+    let porte = prompt(`Insira o porte do seu cão: (Insira P-pequeno|M-médio|G-grande)`).trim().toUpperCase();
 
-    
-    // PROCESSAMENTO
 
-    
-    // SAÍDA
+    switch (porte) {
+        case "P":
+            idade = idade * 5
+            alert(`O seu mini caozinho tem ${idade} anos humanos.`)
+            break;
+        case "M":
+            idade = idade * 6
+            alert(`O seu cão tem ${idade} anos humanos.`)
+        default:
+            alert(`O seu cão tem ${idade} anos humanos.`)
+            break;
+    }
 
-    </script>
+</script>

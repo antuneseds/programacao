@@ -7,15 +7,40 @@
     - "Mora perto da vítima?"
     - "Devia para a vítima?"
     - "Já trabalhou com a vítima?"
-    O script deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
+    O script deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser 
+    classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
     */
 
-    //ENTRADA
+    let telefone= prompt(`Telefonou para a vítima? (Insira S-sim ou N-não)`).trim().toUpperCase();
+    let local= prompt(`Esteve no local do crime? (Insira S-sim ou N-não)`).trim().toUpperCase();
+    let moradia= prompt(`Mora perto da vítima? (Insira S-sim ou N-não)`).trim().toUpperCase();
+    let devia= prompt(`Devia para a vítima? (Insira S-sim ou N-não)`).trim().toUpperCase();
+    let trabalhou= prompt(`Já trabalhou com a vítima? (Insira S-sim ou N-não)`).trim().toUpperCase();
 
-    
-    //PROCESSAMENTO
+    let pontos = 0;
 
+    if (telefone == "S") pontos++;
+    if (local == "S") pontos++;
+    if (moradia == "S") pontos++;
+    if (devia == "S") pontos++;
+    if (trabalhou == "S") pontos++;
 
-    //SAÍDA
+    switch (pontos) {
+        case 0:
+        case 1:
+            alert(`Inocente!`);
+            break;    
+        case 2:
+            alert(`Suspeita!`);
+            break;
+        case 3:
+        case 4:
+            alert(`Cúmplice!`);
+            break;
+        case 5:
+            alert(`Assassino!`);
+            break;
+    }
+
 
 </script>

@@ -5,12 +5,69 @@
     De acordo com as respostas, informe qual a estação do ano correspondente.
     */
 
-    //ENTRADA
+    let hemisferio= prompt(`Em qual hemisfério você mora? (Insira N-norte ou S-sul)`).trim().toUpperCase();
+    let mes= Number(prompt(`Qual o mês atual:`).trim());
 
+    switch (hemisferio) {
+        
+        case "S":
+            switch (mes) {
+                case 1:
+                case 2:
+                case 3:
+                    alert(`Summer!`);
+                    break;
+            
+                case 4:
+                case 5:
+                case 6:
+                    alert(`Fall!`);
+                    break;
+
+                case 7:
+                case 8:
+                case 9:
+                    alert(`Winter`);
+                    break;
+
+                case 10:
+                case 11:
+                case 12:
+                    alert(`Spring`);
+                    break;
+            }
+            break;
+        case "N":   
+            switch (mes) {
+                case 1:
+                case 2:
+                case 3:
+                    alert(`Winter`);
+                    break;
+            
+                case 4:
+                case 5:
+                case 6:
+                    alert(`Spring!`);
+                    break;
+
+                case 7:
+                case 8:
+                case 9:
+                    alert(`Summer!`);
+                    break;
+
+                case 10:
+                case 11:
+                case 12:
+                    alert(`Fall!`);
+                    break;
+            }
+            break;
     
-    //PROCESSAMENTO
-
-
-    //SAÍDA
+        default:
+            alert(`Resposta Inválida!`)
+            break;
+    }
 
 </script>
