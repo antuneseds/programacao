@@ -1,0 +1,45 @@
+<script>
+/*
+    Problema: Salário Líquido
+    Em uma Universidade, todos os Professores trabalham 40H por semana. O salário bruto de cada Professor é calculado de acordo com a sua formação
+     e quantos anos de carreira possui na instituição.
+    Faça um programa que receba o seu maior grau de formação e há quanto tempo trabalha na instituição.
+    Considere que o salário bruto do Professor é calculado da seguinte forma:
+    - E-Especialista: R$ 40,00 por hora
+    - M-Mestre: R$ 55,00 por hora
+    - D-Doutor: R$ 65,00 por hora
+    Sobre o tempo de trabalho, considere que:
+    - Se o Professor possuir mais de 3 anos de instituição, ele recebe um adicional de 20% sobre o salário bruto
+    - Se o Professor possuir mais de 6 anos de instituição, ele recebe um bônus de 40% sobre o salário bruto
+    - Se o Professor possuir mais de 9 anos de instituição, ele recebe um bônus de 55% sobre o salário bruto
+    Apresente o salário bruto do Professor ao final do programa.
+    */
+
+   let grau= prompt(`Insira o seu grau de formação: E, M ou D`).toUpperCase();
+   let tempo= Number(prompt(`Insira o seu tempo de trabalho na universidade:`).trim());
+
+   if (grau == "E") {
+    if (tempo > 3) alert(`Salário bruto será de R$${(40 * 4 * 40 * 1.2).toFixed(2).replace(".",",")}.`);
+    else if (tempo > 6) alert(`Salário bruto será de R$${(40 * 4 * 40 * 1.4).toFixed(2).replace(".",",")}.`);
+    else if (tempo > 9) alert(`Salário bruto será de R$${(40 * 4 * 40 * 1.55).toFixed(2).replace(".",",")}.`);
+    else alert(`O salário bruto será de R$${(40 * 4 * 40).toFixed(2).replace(".",",")}.`);
+   }
+
+   else if (grau == "M") {
+    if (tempo > 3) alert(`Salário bruto será de R$${(40 * 4 * 55 * 1.2).toFixed(2).replace(".",",")}.`);
+    else if (tempo > 6) alert(`Salário bruto será de R$${(40 * 4 * 55 * 1.4).toFixed(2).replace(".",",")}.`);
+    else if (tempo > 9) alert(`Salário bruto será de R$${(40 * 4 * 55 * 1.55).toFixed(2).replace(".",",")}.`);
+    else alert(`O salário bruto será de R$${(40 * 4 * 55).toFixed(2).replace(".",",")}.`);
+   }
+
+   else if (grau == "D") {
+    if (tempo > 3) alert(`Salário bruto será de R$${(40 * 4 * 65 * 1.2).toFixed(2).replace(".",",")}.`);
+    else if (tempo > 6) alert(`Salário bruto será de R$${(40 * 4 * 65 * 1.4).toFixed(2).replace(".",",")}.`);
+    else if (tempo > 9) alert(`Salário bruto será de R$${(40 * 4 * 65 * 1.55).toFixed(2).replace(".",",")}.`);
+    else alert(`O salário bruto será de R$${(40 * 4 * 65).toFixed(2).replace(".",",")}.`);
+   }
+
+   else alert(`Resposta Inválida!`);
+
+
+</script>
