@@ -10,6 +10,32 @@
     let ordem = [];
 
     //PROCESSAMENTO
-    if 
+    if (nm1 > nm2 && nm2 > nm3) {
+        ordem = [nm1, nm2, nm3];
+        alert(ordem);
+    }
+    else if (nm1 > nm3 && nm3 > nm2) {
+        ordem = [nm1 , nm3 , nm2];
+        alert(ordem);
+    }
+    else if (nm2 > nm3 && nm3 > nm1) {
+        ordem = [nm2 , nm3 , nm1];
+        alert(ordem);
+    }
+    else if (nm2 > nm1 && nm1 > nm3) {
+        ordem = [nm2 , nm1 , nm3];
+        alert(ordem);
+    }
+    else if (nm3 > nm2 && nm2 > nm1) {
+        ordem = [nm3 , nm2 , nm1];
+        alert(ordem);
+    }
+    else if (nm3 > nm1 && nm1 > nm2) {
+        ordem = [nm3 , nm1 , nm2];
+        alert(ordem);
+    }
+    else {
+        alert(`Valor Inválido!`);
+    }
 
 </script>

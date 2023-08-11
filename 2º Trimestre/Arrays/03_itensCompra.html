@@ -8,17 +8,19 @@
     //A lista completa de compras é: fruta1, fruta2, fruta3, bebida1, bebida2, bebida3.
 
     //ENTRADA
-    let fruta1 = prompt(`Insira uma fruta:`);
-    let fruta2 = prompt(`Insira outra fruta:`);
-    let fruta3 = prompt(`Insira outra fruta:`);
-    let bebida1 = prompt(`Insira outra bebida:`);
-    let bebida2 = prompt(`Insira outra bebida:`);
-    let bebida3 = prompt(`Insira outra bebida:`);
-
+    let fruta1 = prompt(`Insira uma fruta:`).trim();
+    let fruta2 = prompt(`Insira outra fruta:`).trim();
+    let fruta3 = prompt(`Insira outra fruta:`).trim();
+    let bebida1 = prompt(`Insira outra bebida:`).trim();
+    let bebida2 = prompt(`Insira outra bebida:`).trim();
+    let bebida3 = prompt(`Insira outra bebida:`).trim();
+    const listaf = [fruta1, fruta2, fruta3];
+    const listab = [bebida1, bebida2, bebida3];
 
     //PROCESSAMENTO
+    alert(listaf.join(", "));
+    alert(listab.join(", "));
+    alert(listaf.join(", ") + ", "  + listab.join(", "));
 
-
-    //SAÍDA
 
 </script>
