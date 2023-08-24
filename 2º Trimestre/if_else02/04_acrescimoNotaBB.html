@@ -10,10 +10,10 @@
 
     // entrada
     const nota1 = Number(prompt(`Insira a nota do little brother anterior ao auxílio do big brother:`)
-    .trim().replace("," , "."));
+        .trim().replace(",", "."));
     const nota2 = Number(prompt(`Insira a nota do little brother após a ajuda do big brother:`)
-    .trim().replace("," , "."));
-    
+        .trim().replace(",", "."));
+
     // processamento
     let aumento = nota1 - nota2;
 
@@ -22,11 +22,11 @@
         if (aumento > 0) {
 
             aumento *= 1.25;
-            alert(`O big brother vai receber um aumento de ${aumento.toFixed(1).replace("." , ",")} em nota.`);
+            alert(`O big brother vai receber um aumento de ${aumento.toFixed(1).replace(".", ",")} em nota.`);
 
         }
         else alert(`O big brother não irá receber um aumento em sua nota.`);
-        
+
     }
     else alert(`Resposta inválida`);
 
