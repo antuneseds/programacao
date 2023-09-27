@@ -7,10 +7,13 @@
 
     //ENTRADA
     let listaDeNomes = ["Amanda", "Eduardo", "Fábio", "Evelin", "César", "José", "Ivo", "Eva", "Otávio", "Inez", "Osmar", "Ulisses"];
-    let vogal = [];
+    let vogais = [];
 
     //PROCESSAMENTO
+    for (const vogal of listaDeNomes) {
+        if (vogal[0] == "A" || vogal[0] == "E" || vogal[0] == "I" || vogal[0] == "O" || vogal[0] == "U") vogais.push(vogal);
+    }
 
-    //SAÍDA
+    alert(`Os nomes em ordem alfabética é ${vogais.sort().join(", ")}.`);
 
 </script>

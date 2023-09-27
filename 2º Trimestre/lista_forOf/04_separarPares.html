@@ -7,14 +7,15 @@
 
     //ENTRADA
     let listaDeItens = [1, "João", "Eduardo", "Joice", 3, 5, 6, 8, "Maria", 5.6, 10];
-    let par = []; 
-    
-    
-
+    let par = [];
 
     //PROCESSAMENTO
-
+    for (const item of listaDeItens) {
+        if (item % 2 == 0) {
+            par.push(item);
+        }
+    }
 
     //SAÍDA
-
+    document.write(`Os números pares são ${par.join(", ")}. Existem ${par.length} números pares. Na lista original haviam ${listaDeItens.length} itens.`);
 </script>

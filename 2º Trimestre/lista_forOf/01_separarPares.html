@@ -8,15 +8,15 @@
     //ENTRADA
     let listaDeNumeros = [1, 4, 6, 8, 898, 7, 43, 2980, 3500, 10];
     let pares = [];
+    pares.push(1);
 
     //PROCESSAMENTO
-   for (let numeros of listaDeNumeros) {
-    if (pares % 2 == 0) {
-        pares.push(numeros);
-        pares.sort((a,b) => a-b);
-    } 
-   }
+    for (let numero of listaDeNumeros) {
+        if (numero % 2 == 0) {
+            pares.push(numero);
+        }
+    }
 
-   alert(`Os números pares são: ${pares.join(`, `)}.`);
+    alert(`Os números pares são: ${pares.join(`, `)}.`);
 
 </script>

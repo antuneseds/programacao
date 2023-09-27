@@ -7,9 +7,13 @@
 
     //ENTRADA
     let listaDeNomes = ["João Pedro", "Gabriel José", "Ulisses Joao", "Pedro Henrique", "João da Silva", "João Henrique", "Alisson João"];
+    let nomes = [];
 
     //PROCESSAMENTO
+    for (const nome of listaDeNomes) {
+        if (nome.toLowerCase().includes("joão") || nome.toLowerCase().includes("joao")) nomes.push(nome);
+    }
     
-    //SAÍDA
+    alert(`Os nomes que contém "João" ou "Joao" são ${nomes.join(", ")}.`);
 
 </script>
