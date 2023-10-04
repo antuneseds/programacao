@@ -8,11 +8,31 @@
     */
 
     //ENTRADA
-
+    let representantes = [];
+    const quatidadeA = Number(prompt(`Quantos alunos irão votar?`));
+    let rep1 = 0;
+    let rep2 = 0;
+    let rep3 = 0;
 
     //PROCESSAMENTO
+    for (let i = 3; i >= 1; i--) {
+        let representante = prompt(`Nome do representante? (restam ${i} representantes)`);
+        representantes.push(representante);
+    }
 
+    for (let i = quatidadeA; i >= 1; i--) {
+        let voto = Number(prompt(`Em qual representante você ira votar? (1)${representantes[0]}, (2)${representantes[1]} ou (3)${representantes[2]}.`));
+        switch (voto) {
+            case 1: rep1++; break;
+            case 2: rep2++; break;
+            case 3: rep3++; break;
+        }
+    }
 
     //SAÍDA
+    document.write(`${representantes[0]} recebeu ${rep1} votos, totalizando ${((rep1 / quatidadeA) * 100).toFixed(2).replace(".", ",")}% <br> 
+    ${representantes[1]} recebeu ${rep2} votos, totalizando ${((rep2 / quatidadeA) * 100).toFixed(2).replace(".", ",")}% <br>  
+    ${representantes[2]} recebeu ${rep3} votos, totalizando ${((rep3 / quatidadeA) * 100).toFixed(2).replace(".", ",")}%`);
+
 
 </script>

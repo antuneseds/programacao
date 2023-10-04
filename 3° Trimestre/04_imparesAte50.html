@@ -6,11 +6,16 @@
     */
 
     //ENTRADA
-
+    let impares = [];
 
     //PROCESSAMENTO
-
+    for (let i = 1; i <= 50; i++) {
+        if (i % 2 == 0) {
+            impares.push(i);
+        }
+    }
 
     //SAÍDA
+    alert(`Os números ímpares entre 1 e 50 são: ${impares.join(", ")}`);
 
 </script>

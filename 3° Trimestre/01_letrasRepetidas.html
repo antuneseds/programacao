@@ -11,11 +11,21 @@
 
     //ENTRADA
     let listaDeLetras = ["a", "b", "d", "e", "E", "F", "C", "U", "u", "e", "W", "D"];
+    let novaLista = [];
 
-    
     //PROCESSAMENTO
+    /* Validar elemento por elemento */
+    for (let contador = 0; contador < listaDeLetras.length; contador++) {
+        /* Em 'letra' serão colocados os elementos da 'listaDeLetras' em letras minúculas */
+        const letra = listaDeLetras[contador].toLowerCase();
+        /* 'novaLista' receberá os elementos sem repetirem */
+        if (novaLista.includes(letra) == false) {
+            novaLista.push(letra);
+        }
+    }
 
-    
     //SAÍDA
+    /* Organizados em ordem alfabética */
+    document.write(novaLista.sort().join(', '));
 
 </script>

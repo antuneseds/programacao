@@ -6,11 +6,13 @@
     */
 
     //ENTRADA
+    let populacao = 50000;
 
-    
     //PROCESSAMENTO
-    
-
-    //SAÍDA
+    for (i = 0; i <= 10; i++) {
+        populacao *= 1.015;
+        if (i == 5) document.write(`A população em 5 anos sera um total de ${Math.round(populacao)} pessoas <br>`);
+        else if (i == 10) document.write(`A população em 10 anos sera um total de ${Math.round(populacao)} pessoas`);
+    }
 
 </script>

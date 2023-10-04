@@ -7,11 +7,17 @@
     */
 
     //ENTRADA
+    let numeros = [];
 
-    
     //PROCESSAMENTO
+    for (i = 5; i >= 1; i--) {
+        numero = Number(prompt(`Informe um número:`));
+        numeros.push(numero);
+    }
+    let mn = Math.max(...numeros);
 
-    
     //SAÍDA
+    alert(`O maior numero dentre os que você disse é o ${mn}`);
+
 
 </script>

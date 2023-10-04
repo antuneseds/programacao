@@ -5,11 +5,15 @@
     */
 
     //ENTRADA
-
+    let multiplos = []
 
     //PROCESSAMENTO
-
+    for (i = 100; i >= 3; i--) {
+        if (i / 3 == Math.round(i / 3)) multiplos.push(i);
+    }
+    multiplos.sort((a, b) => a - b);
 
     //SAÍDA
+    alert(multiplos.join(", "));
 
 </script>

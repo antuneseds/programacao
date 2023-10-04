@@ -6,11 +6,26 @@
     */
 
     //ENTRADA
+    let numeroInicial = Number(prompt(`Insira o número inicial`));
+    let numeroFinal = Number(prompt(`Insira o número final`));
+    let pares = [];
+    let impares = [];
 
-    
     //PROCESSAMENTO
+    if (numeroFinal > numeroInicial) {
+        for (i = numeroInicial; i <= numeroFinal; i++) {
+            Math.ceil(i);
+            if (i % 2 == 0) pares.push(i);
+            else impares.push(i);
+        }
+    }
+    else {
+        alert(`Valor Inválido!`);
+        window.location.reload(true);
+    }
 
-    
     //SAÍDA
+    document.write(`Os números pares entre ${numeroInicial} e ${numeroFinal} são: ${pares.join(", ")} <br> 
+    Os números ímpares são: ${impares.join(", ")}`);
 
 </script>

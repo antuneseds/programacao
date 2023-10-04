@@ -6,11 +6,13 @@
     */
 
     //ENTRADA
+    let populacao = 80000;
+    let anos = 0;
 
-    
     //PROCESSAMENTO
-
-    
-    //SAÍDA
+    for (anos; populacao <= 200000; anos++) {
+        populacao *= 1.03;
+        if (populacao > 200000) alert(`Demorou ${anos} anos para chegar a ${Math.round(populacao)} habitantes`);
+    }
 
 </script>

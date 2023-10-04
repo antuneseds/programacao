@@ -5,11 +5,15 @@
     */
 
     //ENTRADA
-
+    investimento = 1000;
+    let dias = 0;
 
     //PROCESSAMENTO
-
+    for (dias = 0; investimento <= 2000; dias++) {
+        investimento *= 1.02;
+    }
 
     //SAÍDA
+    alert(`Demorou ${dias} dias para alcancar os R$${investimento.toFixed(2).replace(".", ",")} de investimento`);
 
 </script>
