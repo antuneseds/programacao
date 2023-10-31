@@ -11,13 +11,12 @@
     let soma = 0;
 
     //PROCESSAMENTO
-    for (i = quantidade; i <= 1; quantidade--) {
-        let nota = Number(prompt(`Qual a nota que o aluno obteve?(Ainda faltam ${quantidade} nota(s))`));
-        soma += nota;
+    for (let contador = 1; contador <= quantidade; contador++) {
+        let nota = Number(prompt(`Informe a nota do aluno:`));
+        soma = soma + nota;
     }
+    let media = soma / quantidade;
 
     //SAÍDA
-    alert(`A média do aluno no final do período foi de ${(soma / quantidade).toFixed(1)}`);
-
-
+    document.write(`A média do aluno é ${media}.`);
 </script>

@@ -12,20 +12,18 @@
     //ENTRADA
     let listaDeLetras = ["a", "b", "d", "e", "E", "F", "C", "U", "u", "e", "W", "D"];
     let novaLista = [];
-
+    
     //PROCESSAMENTO
     /* Validar elemento por elemento */
-    for (let contador = 0; contador < listaDeLetras.length; contador++) {
-        /* Em 'letra' serão colocados os elementos da 'listaDeLetras' em letras minúculas */
-        const letra = listaDeLetras[contador].toLowerCase();
-        /* 'novaLista' receberá os elementos sem repetirem */
-        if (novaLista.includes(letra) == false) {
-            novaLista.push(letra);
+    for (let index = 0; index < listaDeLetras.length; index++) {
+        let letraAtual = listaDeLetras[index].toLowerCase();
+        if (novaLista.includes(letraAtual) == false) {
+            novaLista.push(letraAtual);
         }
     }
-
+    
     //SAÍDA
     /* Organizados em ordem alfabética */
-    document.write(novaLista.sort().join(', '));
-
+    novaLista.sort();
+    document.write(`A lista de letras não repetidas contém ${novaLista.join(", ")}.`);
 </script>
