@@ -5,10 +5,10 @@
     F = (9 * C + 160) / 5
     */
 
-    let c = Number(prompt(`Informe a temperatura em graus Celsius:`));
+    let c = temp(Number(prompt(`Informe a temperatura em graus Celsius:`)));
 
-    function temp() {
-        
+    function temp(celsius) {
+        alert(`A conversão da temperatura de celsius para fahrenheit é ${(9 * celsius + 160) / 5}.`);
     }
 
 </script>

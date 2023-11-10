@@ -7,12 +7,19 @@
     P = 2 * π * r
     */
 
-    //Entrada
+    let raio = Number(prompt(`Informe o raio do círculo:`));
 
+    
+    function calculaArea(valorRaio) {
+        const valorArea = Math.PI * (Math.pow(valorRaio, 2));
+        return valorArea;
+    }
 
-    //Processamento
+    function calculaPerimetro(valorRaio) {
+        const valorPerimetro = 2 * Math.PI * valorRaio;
+        alert(`O perímetro do círculo é de ${valorPerimetro}.`);
+    }
 
-
-    //Saída
+    alert(`A área do círculo é de ${calculaArea(raio)}`); //com retorno
 
 </script>

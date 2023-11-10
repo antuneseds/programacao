@@ -6,12 +6,16 @@
     *Para simplificar, não considere vogais acentuadas.
     */
 
-    //Entrada
+    let p = prompt(`Informe uma palavra:`);
 
-
-    //Processamento
-
-
-    //Saída
-
+    function palavra(vogal) {
+        let quantidade = 0;
+        for (let i = 0; i < p.length; i++) {
+            if (p[i] == 'a' || p[i] == 'e' || p[i] == 'i' || p[i] == 'o' || p[i] == 'u') {
+                quantidade++;
+            }
+        }
+        return(quantidade);
+    }
+    alert(`A quantidade de vogais é ${palavra(p)}`);
 </script>
