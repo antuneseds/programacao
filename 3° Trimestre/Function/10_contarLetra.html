@@ -6,11 +6,22 @@
     */
 
     //Entrada
-
+    const resultado = contarPalavra(
+        prompt(`Escolha uma frase`).toLowerCase(),
+        prompt(`Escolha uma letra`).toLowerCase()
+    );
 
     //Processamento
+    function contarPalavra(frase, letra, contador = 0) {
+        for (const varredor of frase) {
+            if (varredor === letra) {
+                contador++;
+            }
+        }
 
+        if (contador === 0) return alert(`A letra ${letra} não existe na frase`);
+        else return alert(`A quantidade de vezes que a letra "${letra}" aparece na palavra ${frase} é: ${contador}`);
+    }
 
-    //Saída
 
 </script>

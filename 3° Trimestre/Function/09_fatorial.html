@@ -5,11 +5,17 @@
     */
 
     //Entrada
-
+    let numero = parseInt(prompt(`informe um número inteiro:`))
 
     //Processamento
-
-
-    //Saída
+    function fatorial(numero) {
+        if (numero == 1) {
+            return 1;
+        } else {
+            return numero * fatorial(numero - 1);
+        }
+    }
+    let resultado = fatorial(numero);
+    alert(resultado);
 
 </script>

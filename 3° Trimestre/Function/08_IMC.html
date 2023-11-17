@@ -5,12 +5,14 @@
     IMC = peso / altura²
     */
 
-   let p = Number(prompt(`Insira o seu peso:`));
-   let a = Number(prompt(`Insira a sua altura:`));
+    let p = Number(prompt(`Informe seu peso:`))
+    let a = Number(prompt(`Informe sua altura:`))
 
-   function calcularPeso(peso) {
-    let valorPeso = peso / (Math.pow(altura, 2));
-    
-   }
+    //Processamento
+    function calculo(p, a) {
+        alert(p / a ** 2)
+    }
 
+    //Saída
+    calculo(p, a)
 </script>

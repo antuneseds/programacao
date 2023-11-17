@@ -5,11 +5,21 @@
     */
 
     //Entrada
-
+    const n = Number(prompt(`INforme um número:`))
+    let divisivel = 0;
 
     //Processamento
-
+    function calculo(n) {
+        for (let i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                divisivel++;
+            }
+        }
+    }
 
     //Saída
+    if (divisivel == 2) alert(`O número ${n} é primo`);
+    else alert(`O número ${n} não é primo`);
+    calculo(n)
 
 </script>
