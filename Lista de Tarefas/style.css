@@ -1,7 +1,8 @@
 img {
     height: 25px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
-
 .container {
     background-color: #d1d1d1;
     width: 500px;
@@ -27,4 +28,37 @@ body {
     width: 300px;
     height: 40px;
     padding-left: 10px;
+}
+
+.botao-add {
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    background-color: #fff;
+    font-size: 17px;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.list {
+    width: 100%;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.task {
+    background-color: #F2F2F2;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+} 
+
+.task:hover img {
+    opacity: 1;
 }
