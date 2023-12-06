@@ -3,6 +3,7 @@ img {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
+
 .container {
     background-color: #d1d1d1;
     width: 500px;
@@ -54,11 +55,16 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 15px;
-    border-radius: 5px;
+    border-radius: 5px;4
     margin-bottom: 20px;
     cursor: pointer;
-} 
+}
 
 .task:hover img {
     opacity: 1;
+}
+
+.done {
+    background-color: #BF8D7A;
+    text-decoration: line-through;
 }
